@@ -1,0 +1,64 @@
+// Problema3
+
+// Dadas las notas de tres (3) estudiantes; generar una solución que permita encontrar el promedio de las calificaciones por cada conjunto de notas de los estudiantes. 
+La problemática sugiere el uso de estructuras de datos. Las notas están en un arreglo bidimensional llamado notas; notas tiene 3 filas y 4 columnas.
+//Los nombres de los estudiantes están en un arreglo unidimensional que tiene 3 elementos. El arreglo se llama estudiantes
+
+//Atención; los valores del arreglo notas de la fila del índice 0 pertenecen al estudiante del índice 0 del arreglo estudiantes; y así con cada fila de notas e índice de estudiantes
+
+//Cada promedio de notas de un estudiante deberá ser almacenado en una posición de un arreglo unidimensional llamado promedios; resaltar que el arreglo promedios tendrá 3 elementos.
+
+//       9(0,0)    10(0,1)     7(0,2)     8(0,3)
+         10(1,0)   5(1,1)      7(1,2)     9(1,3)
+         7(2,0)    9.4(2,1)    10(2,2)    9(2,3)
+         
+        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.  Inicio
+2.  (notas(3)(4),d[1-n])
+3.  (nombresEstudiantes(3),x(60)[{A-Z},{a-z},{BS}])
+4.  fila, i[0-n]
+5.  columna, i[0-n]
+6.  suma, d[0-n]
+7.  promedio d[0-n]
+8.  notas <-- {9, 10, 7, 8}, {10, 5, 7, 9}, {7, 9.4, 10, 9}
+                 //  0             1              2
+9.  nombresEstudiantes <-- {Jerry ponce, Gabriela Lewis, David Bell}
+                          //   0               1             2
+
+10.Para(fila<--0, fila<3, 1) haga // 0<3 v // 1<3 v // 2<3 v // 3<3 f
+
+11. suma <-- 0
+12. promedio <-- 0
+
+13.  Para(columna<--0, columna<4, 1) haga // 0<4 v // 1<4 v // 2<4 v //3<4 v //4<4 f
+                                          // 0<4 v // 1<4 v // 2<4 v //3<4 v //4<4 f
+                                          // 0<4 v // 1<4 v // 2<4 v //3<4 v //4<4 f               
+                     
+14.    suma <-- suma + notas[fila][columna] // notas[0][0] // 0+9 = 9    // notas[1][0] // 0+10 = 10  // notas[2][0] // 0+7 = 7
+                                         // notas[0][1] // 9+10 = 19   // notas[1][1] // 10+5 = 15  // notas[2][1] // 7+9.4 =16.4
+                                         // notas[0][2] // 19+7 = 26   // notas[1][2] // 15+7 = 22  // notas[2][2] // 16.4+10 = 26.4
+ 					 // notas[0][3] // 26+8 = 34   // notas[1][3] // 22+9 = 31  // notas[2][3] // 26.4+9 = 35.4
+                                        
+     
+       
+15.  Fin_Para 
+
+16. promedio <--  suma /4 // 34/4 = 8.5 // 31/4 = 7.75 // 35.4/4 = 8.85
+	
+17. Escribir  "Estudiante:"+" "+nombresEstudiantes[fila]+" "+"tiene un promedio de notas"+" "+ promedio     // Estudiante: Jerry ponce tiene un promedio de 8.5
+                                                 // 0                                                       // Estudiante: Gabriela Lewis tiene un promedio de 7.75
+                                                 // 1                                                       // Estudiante: David Bell tiene un promedio de 8.85
+                                                 // 2                                                          
+18.Fin_Para 
+19.Fin
+
+
+//pantalla
+
+// Estudiante: Jerry ponce tiene un promedio de 8.5
+// Estudiante: Gabriela Lewis tiene un promedio de 7.75
+// Estudiante: David Bell tiene un promedio de 8.85
+                                                                                                     
+
